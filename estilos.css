@@ -1,41 +1,147 @@
-#encabezado{
-    background-color: #F54958;
-    padding: 10px;
-    height: 200px;
+*{
+  padding: 0px;
+  margin: 0px;
+  box-sizing: border-box;  
 }
-#divIzq{
-    background-color: #EBB720;
-    width: 40%;
-    float: left;
-    height: 200px;
+body{
+    font-size: x-large;
+}
+header{
+    display: flex;
+    flex-direction: column; 
+    background-color: #bfe3c3;
+    color: black;
+    text-align: center;
+    padding: 20px;
+   
+}
+.divTitulo{
+    flex: 80%;
+}
+nav{
+    background-color: #99928e;
+    flex-direction: column; 
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
     text-align: center;
 }
-#divDer{
-    background-color: #4E5ADE;
-    width: 60%;
-    float: right;
-    height: 200px;
+nav a{
+    color: white;
+    font-size: 20px;
+    padding: 15px;
+    text-decoration: none;
 }
-.Principal{
-    background-color: beige;
+nav a:hover{
+    background-color: #fff2d4;
+    color: black;
+}
+main{
     display: flex;
-    flex-direction: row; /* para invertir las columnas column-reverse*/ /*row para ponerlo en filas*/ /* row-reverse para invertirlo*/
-    flex-wrap: wrap; /* nowrap se mantiene las filas y con el wrap se adaptan*/
-    justify-content: center /* center lo alinia al centro*/ /*space-between se distribuyen*/ /*space-around*/
+    flex-wrap: wrap;
 }
-.div2{
-    background-color: rgb(215, 213, 201);
-    height: 200px;
+aside{
+    flex: 30%;
+    background-color: #edffb3;
+    padding: 10px;
+    text-align: center;
 }
-.div3{
-    background-color: rgb(243, 163, 113);
-    height: 200px;
+section{
+    flex: 70%;
+    background-color: #fff2d4;
+    padding: 10px;
 }
-.derecha{
+article{
+    margin-top: 30px;
+}
+article p{
+    text-align: justify;
+}
+footer{
+    background-color: #bfe3c3;
+    text-align: center;
+    padding: 20px;
+}
+.Contenedor{
+    display: flex;
+    flex-wrap: wrap;
+
+     /*Tarjetas */
+
+}
+.tarjeta{
+    border: 1px solid red;
+    width: 300px;
+    border-radius: 6px;
+    box-shadow: rgb(181, 134, 41) 5px 5px 5px; 
+    margin: 15px;
+}
+.tarjeta img{
+    width: 200px;
+    height: 250px;
+}
+.titulo-tarjeta{
+    text-align: center;
+    font-weight: 800;
+    padding-bottom: 20px; /* deja un espacio de separacion */
+    border-bottom: 1px solid red;
+    background-color: rgb(164, 108, 62);
+    color: white;
+    font-size: 20px;
+}
+.tarjeta div{ /* Este pading se aplica a todo elemento que este adentro de la clase tarjeta*/
+    padding: 15px; /* Deja un margen*/
+}
+.descripcion{
+    text-align: justify;
+}
+.precio{
+    text-align: center;
+}
+.tarjeta button{
+    padding: 10px;
+    background-color: rgb(218, 68, 9);
+    color: aliceblue;
+    font-size: 25px;
+    border: 1px solid #000;
+    
+}
+.body{
+    display: flex;
+}
+.enviar{
+    float: right;
+    justify-content: flex-end;
+}
+
+ /*Imagen y tabla */
+.container {
+    display: flex;
+  }
+  
+  .table {
     flex: 1;
-    margin-right: 260px;
-}
-.izquierda{
+  }
+  
+  .image {
     flex: 1;
-    margin-left: 500px;
+    margin-left: auto;
+  }
+
+
+@media screen and (max-width: 1024px){
+        /*Tableta*/
+        .tarjeta{
+            width: 218px;
+        }
+        .tarjeta img{
+        width: 100px;
+        height: 180px;
+        }
+}
+ @media screen and (max-width: 767px){
+        /*celular*/
+        nav{
+            flex-flow: column;
+        }
 }
